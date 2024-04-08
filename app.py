@@ -2,7 +2,7 @@
 """
 Created on Sat Apr  6 14:49:46 2024
 
-@author: Alex
+@author: Alex Valadares
 """
 
 from flask import Flask, render_template, request, redirect, url_for
@@ -24,6 +24,7 @@ def add():
     amount = request.form['amount']
     add_expense(description, amount)
     return redirect(url_for('index'))
+
 
 # Delete expense route
 @app.route('/delete/<int:expense_id>')
